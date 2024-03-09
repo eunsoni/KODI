@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+.fileRoom{
+	margin-top:10px;
+}
+main {
+   max-width: 1200px;
+   margin: 20px auto;
+   justify-content: center;
+   margin-bottom: 20px;
+   padding-bottom: 20px;
+}
+
+.alreadySaveImage{
+	
+	width:200px;
+	height:200px;
+}
+#modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	
+	z-index: 1000;
+}
+
+#modal .pop {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 550px;
+	height: 500px;
+	background: #fff;
+	z-index: 1001;
+	border-radius: 10px;
+	max-height: 40vh; /* 최대 높이를 화면의 80%로 설정 (또는 원하는 값으로 조절) */
+    overflow-y: auto;
+}
+#inputStoreName{
+	margin-top:4%;
+	margin-left:4%;
+	width: 200px;
+	height: 23px;
+	padding: 3px;
+	border: 2px solid #D9D9D9;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'NanumSquareNeo';
+	
+}
+#searchAddressBtn{
+	height: 30px;
+background-color: #EDF2F6;
+  border: 1px solid #EDF2F6;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'NanumSquareNeo';
+}
+#closeModalBtn{
+	height: 30px;
+background-color: #EDF2F6;
+  border: 1px solid #EDF2F6;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'NanumSquareNeo';
+}
+.label{
+	margin-left:5%;
+	height: 35px;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+  	font-weight: 500;
+  	cursor: pointer;
+  	font-family: 'NanumSquareNeo';
+  	font-size: 16px;
+}
+.post{
+	max-width: 635px;
+	margin: 0 auto;
+	margin-top: 3%;
+	margin-bottom: 10%;
+}
+hr {
+  	width: 97%;
+	max-width: 650px;
+	display:flex;
+	margin-left:0%;
+}
+
+#categoryPost{
+	width: 100px;
+	font-size: 15px;
+    padding: 5px;
+    border: 4px solid #D9D9D9;
+  	border-radius: 10px;
+  	font-family: 'NanumSquareNeo';
+}
+#point{
+	width: 100px;
+	
+	font-size: 15px;
+    padding: 5px;
+    border: 4px solid #D9D9D9;
+  	border-radius: 10px;
+  	font-family: 'NanumSquareNeo';
+  	
+}
+#image-container {
+    display: inline-block;
+    margin-right: 10px; /* 이미지와 버튼 사이 간격 조절 */
+}
+
+#image-container img {
+	width: 15px; /* 이미지의 너비 조절 */
+	height: 15px; /* 이미지의 높이 조절 */
+	margin-right: 5px; /* 이미지와 텍스트 사이 간격 조절 */
+	vertical-align: middle; /* 이미지를 텍스트의 중앙에 위치시킴 */
+}
+
+#deleteImageIcon{
+	width: 15px; /* 이미지의 너비 조절 */
+	height: 15px; /* 이미지의 높이 조절 */
+	margin-right: 20px; /* 이미지와 텍스트 사이 간격 조절 */
+	margin-bottom: 185px;
+}
+#tagInput {
+	width: 97%;
+    max-width: 355px;
+  	height: 25px;
+	padding: 5px;
+	border: 4px solid #D9D9D9;
+	border-radius: 10px;
+	font-size: 15px;
+	font-family: 'NanumSquareNeo';
+}
+#writePostTitle{
+	width: 97%;
+	max-width: 650px;
+	height: 25px;
+	padding: 5px 0px 5px 5px;
+	border: 4px solid #D9D9D9;
+	border-radius: 10px;
+	font-size: 15px;
+	font-family: 'NanumSquareNeo';
+}
+#writePostContent{
+	width: 97%;
+	max-width: 650px;
+	padding: 5px 0px 5px 5px;
+	border: 4px solid #D9D9D9;
+	border-radius: 10px;
+	font-size: 15px;
+	font-family: 'NanumSquareNeo';
+}
+
+#tagList {
+    margin-top: 5px;
+}
+.tag {
+display: inline;
+border: 2px solid #FF5656;
+background-color: #FF5656;
+border-radius: 10px;
+color: white;
+padding-left: 10px;
+padding-right: 10px;
+margin-left: 10px;
+}
+
+
+#selectedAddressShow{
+	width: 97%;
+	max-width: 315px;
+	height: 25px;
+	padding: 5px;
+	border: 4px solid #D9D9D9;
+	border-radius: 10px;
+	font-size: 15px;
+	font-family: 'NanumSquareNeo';
+}
+#selectedAddressReal{
+	display: none;
+}
+
+
+#photoBox {
+  display: none;
+}
+
+
+#tagAddBtn,#addressBtn{
+	height: 30px;
+background-color: #EDF2F6;
+  border: 1px solid #EDF2F6;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size:15px;
+  cursor: pointer;
+  font-family: 'NanumSquareNeo';
+  border-radius: 13px;
+}
+
+#addressBtn{
+	width: 80px;
+
+}
+#addressSearchBtn{
+	background-color: #EDF2F6;
+  border: 1px solid #EDF2F6;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+   box-shadow: 0 2px 2px gray, 0 2px 2px #D9D9D9;
+}
+
+#photoBoxs .oldcontainer{
+	display: flex;
+  flex-wrap: wrap;
+}
+.oldcontainer.imageContainer{
+	 width: 30%; 
+}
+
+#imageAddBtn {
+  width: 100px;
+  height: 30px;
+  background-color: #EDF2F6;
+  border: 1px solid #EDF2F6;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'NanumSquareNeo';
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#addImageIcon {
+	width: 20px;
+  height: 20px;
+}
+
+#finishBtn{
+  width: 100px;
+  height: 40px;
+  background-color: #EDF2F6;
+  border: 1px solid #EDF2F6;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size:15px;
+  cursor: pointer;
+  
+font-family: 'NanumSquareNeo';
+}
+#cancelBtn{
+ width: 90px;
+  height: 40px;
+  background-color: #EDF2F6;
+  border: 1px solid #EDF2F6;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size:15px;
+  cursor: pointer;
+ 
+  font-family: 'NanumSquareNeo';
+}
+#garo_btns{
+	
+	margin-left:25%;
+}

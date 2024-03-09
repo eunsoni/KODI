@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.AdminDAO">
+
+    <!-- select  -->
+    <select id="findAllPosts" resultType="postdto">
+        SELECT post_idx as postIdx, title, content, regdate, address, category, grade, member_idx as memberIdx FROM post;
+    </select>
+    <select id="findPostByIdx" resultType="postdto" parameterType="int">
+        SELECT post_idx as postIdx, title, content, regdate, address, category, grade, member_idx as memberIdx FROM post WHERE post_idx=#{postIdx};
+    </select>
+
+    <!-- delete  -->
+    <delete id="deletePost" parameterType="int">
+        DELETE FROM post WHERE post_idx=#{postIdx};
+    </delete>
+
+</mapper>

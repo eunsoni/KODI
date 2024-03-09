@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.ModifyPostDAO">
+	<!-- select -->
+	<select id="selectTag" resultType="int" parameterType="int">
+		select tag_idx as tagIdx
+		from post_tag
+		where post_idx = #{postIdx};
+	</select>
+	
+	<select id="selectTagNum" resultType="int" parameterType="int">
+		select count(tag_idx)
+		from post_tag
+		where post_idx = #{postIdx};
+	</select>
+	
+	<select id="selectImage" resultType="int" parameterType="int">
+		select image_idx as imageIdx
+		from post_image
+		where post_idx = #{postIdx};
+	</select>
+	
+	<select id="selectImageNum" resultType="int" parameterType="int">
+		select count(image_idx)
+		from post_image
+		where post_idx = #{postIdx};
+	</select>
+
+	<!-- insert -->
+	<insert id="insertTag" parameterType="hashmap">
+		insert into post_tag(content, post_idx)
+		values(#{insertTags}, #{postIdx});
+	</insert>
+	
+	<insert id="insertImages" parameterType="hashmap">
+		insert into post_image(src, post_idx)
+		values(#{postImages}, #{postIdx});
+	</insert>
+	
+	<!-- update -->
+	<update id="updatePost" parameterType="hashmap">
+		update post
+		set category = #{category}, grade = #{grade}, title = #{title}, content = #{content}, address = #{address}, regdate = now()
+		where post_idx = #{postIdx};
+	</update>
+	
+	<update id="updateTag" parameterType="hashmap">
+		update post_tag
+		set content = #{updateTags}
+		where tag_idx = #{tagIdxs};
+	</update>
+	
+	<!-- delete -->
+	<delete id="deleteTag" parameterType="hashmap">
+		delete from post_tag
+		where tag_idx = #{deleteTags};
+	</delete>
+	
+	<delete id="deleteImageSrc" parameterType="hashmap">
+		delete from post_image
+		where post_idx = #{postIdx} and src = #{imageSrc};
+	</delete>
+	
+</mapper>

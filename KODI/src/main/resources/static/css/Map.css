@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	max-width: 1400px;
+	margin: 20px auto;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.mapBtn {
+	font-family: 'NanumSquareNeo';
+	width: 80px;
+	justify-content: center;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 5px;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	background-color: #EDF2F6;
+	margin-right: 5px;
+}
+
+.mapBtn:hover {
+	background-color: #6A7EFC;
+	color: #ffffff;
+}
+
+.btnBox {
+	display: flex;
+}
+
+
+
+
+.deleteMark{
+	font-family: 'NanumSquareNeo';
+	max-width: 80px;
+	width: 70px;
+	justify-content: center;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 5px;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	background-color: #EDF2F6;
+	margin-right: 5px;
+	font-size: 0.8em;
+}
+
+.deleteMark:hover{
+	background-color: #FF5656;
+	color: #ffffff;
+	
+}
+
+.titleBox {
+	font-size : 1.2em;
+	display : flex;
+	width: 70%; 
+	height: 45px;
+	margin: 0 auto; 
+	border-radius: 10px;
+	/*border: 2px solid #e9e9e9;*/
+	margin-bottom: 20px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+#googleMap {
+	margin-top: 2%;
+	outline: none;
+}
+
+a {
+    color: #6A7EFC;
+}
+
+a:active {
+    color: green; 
+}
+
+@media all and (max-width:479px){
+	
+	
+}

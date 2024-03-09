@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.SearchMemberListDAO">
+	<!-- select -->
+	<select id="selectMemberIdx" resultType="int" parameterType="String">
+		select member_idx as memberIdx
+		from members
+		where member_name like #{question};
+	</select>
+	
+	<select id="selectMemberName" resultType="String" parameterType="int">
+		select member_name as memberName
+		from members
+		where member_idx = #{memberIdx};
+	</select>
+	
+	<select id="selectFlagIdx" resultType="int" parameterType="int">
+		select flag_idx as flagIdx
+		from members
+		where member_idx = #{memberIdx};
+	</select>
+	
+	<select id="selectFlag" resultType="String" parameterType="int">
+		select src
+		from flag
+		where flag_idx = #{flagIdx};
+	</select>
+	
+	<select id="selectMemberCountry" resultType="String" parameterType="int">
+		select country
+		from flag
+		where flag_idx = #{flagIdx};
+	</select>
+	
+	<select id="selectFriendMemberIdx" resultType="int" parameterType="int">
+		select friend_member_idx as friendMemberIdx
+		from friend
+		where member_idx = #{myMemberIdx};
+	</select>
+	
+	<select id="selectFriendIdx" resultType="int" parameterType="int">
+		select friend_idx as friendIdx 
+		from friend
+		where member_idx = #{memberIdx1} and friend_member_idx = #{memberIdx2};
+	</select>
+	
+	<select id="selectIsFriend" resultType="boolean" parameterType="int">
+		select is_friend as isFriend
+		from friend
+		where friend_idx = #{friendIdx};
+	</select>
+	
+	<select id="selectAdminAllIdx" resultType="int" parameterType="String">
+		select member_idx
+		from members
+		where email like #{admin};
+	</select>
+	
+	<!-- insert -->
+	<insert id="insertFriendRequest" parameterType="hashmap">
+		insert into friend(friend_member_idx, is_friend, member_idx)
+		values (#{friendMemberIdx}, #{isFriend}, #{memberIdx});
+	</insert>
+	
+	<!-- update -->
+	<update id="updateFriendRequest" parameterType="int">
+		update friend
+		set is_friend = true
+		where friend_member_idx = #{friendMemberIdx} and member_idx = #{memberIdx};
+	</update>
+	
+	<!-- delete -->
+	<delete id="deleteFriend">
+		delete from friend
+		where friend_member_idx = #{friendMemberIdx} and member_idx = #{memberIdx};
+	</delete>
+	
+</mapper>

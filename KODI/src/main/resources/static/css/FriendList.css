@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+.friendbox {
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+	text-align: center;
+	position: static;
+	width: 80vw;
+	height: 80vh;
+	max-width: 900px;
+	max-height: 600px;
+	align-items: center;
+	flex-direction: column;
+}
+
+.form-group label {
+	width: 60%;
+}
+
+.friend-btn {
+	margin-bottom: 10px;
+}
+
+#closebtn {
+	font-family: 'NanumSquareNeo';
+	max-width: 80px;
+	width: 80px;
+	justify-content: center;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 5px;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	background-color: #D9D9D9;
+}
+
+#friendheader {
+	
+}
+
+#logo-icon {
+	justify-content: flex-start;
+	width: 100px;
+	height: 80px;
+}
+
+.mainBox {
+	height: 95%;
+	width: 90%;
+	max-width: 90%;
+	box-sizing: border-box;
+	/* 	background-color: yellow;
+ */
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.contentBox {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	/* 	background-color: red;
+ */
+	margin: auto;
+	margin-top : 10px;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+}
+
+.logoBtn {
+	display: flex;
+	flex-direction: column;
+	/* 	background-color: blue;*/
+	flex: 25%;
+}
+
+.friendList, .friendList1, .friendList2, .friendList3 {
+	display: flex;
+	/* 	background-color: green;
+ */
+	flex: 75%;
+}
+
+thead {
+	width: 100%;
+	position: sticky;
+	top: 0;
+	background-color: white;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group button {
+	font-family: 'NanumSquareNeo';
+	max-width: 150px;
+	width: 120px;
+	box-sizing: border-box;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	background-color: #D9D9D9;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+#list {
+	width: 100%;
+	height: auto;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.tdDiv {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	/* 	background-color: pink;
+ */
+}
+
+tr {
+	border-bottom: 2px solid #D9D9D9;
+}
+
+#title {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	align-items: center;
+	border-bottom: 2px solid #000000;
+	padding-bottom: 20px;
+	vertical-align: middle;
+}
+
+#board table {
+	text-align: left;
+	width: 100%;
+}
+
+.friendList table th:nth-child(1) {
+	width: 30%;
+}
+
+.friendList table th:nth-child(2) {
+	width: 45%;
+}
+
+.friendList table th:nth-child(3) {
+	width: 25%;
+}
+
+.f-Btn {
+	font-family: 'NanumSquareNeo';
+	padding: 4px 8px;
+	margin-right: 5px;
+	color: #000000;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	width: 70px;
+	box-sizing: border-box;
+}
+
+.f-Btn:hover {
+	background-color: #D9D9D9;
+	color: #ffffff;
+}
+
+#f-acceptBtn, #f-removeBtn {
+	width: 50px;
+}
+
+#f-drawBtn, #f-cancelBtn, #f-acceptBtn, #f-removeBtn {
+	
+}
+
+@media all and (max-width:479px) {
+	.friendbox {
+		width: 90vw;
+		height: 90vh;
+	}
+	.logoBtn {
+		height: auto;
+	}
+	.contentBox {
+		overflow: hidden;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+	#friendheader {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#friendheader h2 {
+		margin-left: 10px;
+	}
+	.form-group {
+		flex-direction: row;
+	}
+	.form-group button {
+		font-size: 0.6em;
+		width: 100px;
+		box-sizing: border-box;
+		padding: 10px;
+		border: none;
+		cursor: pointer;
+		border-radius: 8px;
+		background-color: #D9D9D9;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+	}
+	.tdDiv {
+		margin-top: 15px;
+		padding-bottom: 15px;
+	}
+	
+	.friendList {
+    overflow-y: auto; 
+    max-height: 600px; 
+}
+	
+	
+}

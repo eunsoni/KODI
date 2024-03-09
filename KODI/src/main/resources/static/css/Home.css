@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	max-width: 1200px;
+	margin: 20px auto;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.menubox {
+	width : 100%;
+	display: flex;
+	border-bottom: 2px solid #000000;
+	padding-bottom: 10px;
+	border-top: 2px solid #000000;
+	padding-top: 10px;
+	justify-content: center;
+}
+
+.menubar {
+	display: flex;
+	max-width: 100%;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.menuicon {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.guidebox {
+	max-width:100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    margin-bottom: 5%;
+	border-bottom: 2px solid #D9D9D9;
+	align-items: flex-start; 
+    justify-content: center;
+}
+
+#chargebox {
+	margin-top: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*수평*/
+    align-items: center; /*수직*/
+    margin-bottom: 5%;
+}
+
+#chargebox table {
+	font-size : 0.8em;
+    max-width:1200px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    
+}
+
+#chargebox th, #chargebox td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    text-align: center;
+    max-width: 200px;
+    white-space: nowrap;
+}
+
+#chargebox th {
+    background-color: #f2f2f2; 
+}
+
+#chargebox tbody tr:hover {
+    background-color: #f0f0f0; 
+}
+
+
+
+.guide {
+    flex-basis: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#guide1{
+	width:100%;
+	margin-top: 20px;
+	margin-bottom: 5%;
+	border-bottom: 2px solid #D9D9D9;
+	overflow-x: auto;
+}
+
+#guide2, #guide3 {
+    flex-basis: calc(50% - 20px); 
+    margin-right: 20px; 
+    margin-bottom: 5%;
+    
+    
+}
+
+
+.guidetitle {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.guidetext {
+	font-size: 1.1em;
+	text-align: left;
+	max-width: 80%;
+	width: 80%;
+	flex: 1;
+	margin: 0 auto;
+}
+
+.guidetext li a {
+	display: block;
+	word-break: break-all;
+}
+
+li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	list-style-type: square;
+}
+
+
+#guidetext1 ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0; 
+    
+}
+
+#guidetext1 li {
+	flex: 1;
+	text-align: center;
+	list-style: none;
+	
+}
+
+@media screen and (max-width:499px) {
+	#sendMsgInput {
+		width: 54%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:500px) and (max-width:659px) {
+	#sendMsgInput {
+		width: 59%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:660px) and (max-width:899px) {
+	#sendMsgInput {
+		width: 65%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:900px) and (max-width:1199px) {
+	#sendMsgInput {
+		width: 68%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:1200px) {
+	#sendMsgInput {
+		width: 71%;
+		margin-left: 10%;
+	}
+}
+
+#chatTitle {
+	margin-top: 20px;
+	margin-left: 10%;
+	font-size: large;
+}
+
+#chatIcon {
+	height: 18px;
+	width: 18px;
+	margin-right: 10px;
+}
+
+#allMsgList {
+	display: block;
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 20px;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+#friendName {
+	display: inline-block;
+	font-weight: bolder;
+	text-align: center;
+	padding: 5px 10px;
+	width: 50px;
+}
+
+#content {
+	display: inline-block;
+	margin-left: 10px;
+	border: 2px solid #EDF2F6;
+	border-radius: 10px;
+	background-color: #EDF2F6;
+	padding: 5px 20px;
+	text-align: center;
+}
+
+#regdate {
+	margin-top: 0px;
+	font-size: small;
+}
+
+#sendMsgDiv {
+	display: flex;
+	margin-bottom: 70px;
+}
+
+#sendMsgInput {
+	display: inline-block;
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	padding: 10px 15px;
+	margin-right: 10px;
+	font-family: 'NanumSquareNeo';
+}
+
+#sendMsgBtn {
+	display: inline-block;
+	cursor: pointer;
+	border: 2px solid #EDF2F6;
+	border-radius: 5px;
+	background-color: #EDF2F6;
+	width: 65px;
+	height: 40px;
+	color: gray;
+	font-family: 'NanumSquareNeo';
+}
+
+@media all and (max-width:479px){
+	main {
+		max-width: 470px;
+	}
+	
+	.menubox {
+		width:100%;
+		border-bottom: 1px solid #000000;
+		border-top: 1px solid #000000;
+	}
+	
+	.menuicon{
+	  width:20px;
+	  height:20px;
+	  }
+	
+	.guidebox {
+		flex-direction: column;
+	}
+	
+	.guide {
+		margin-bottom: 30px;
+	}
+	
+	 #guide1 {
+        max-width: 100%; 
+        overflow-x: auto; 
+    }
+	
+	
+
+
+	
+}

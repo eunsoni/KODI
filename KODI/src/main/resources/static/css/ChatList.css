@@ -1,0 +1,113 @@
+@charset "UTF-8";
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	max-width: 1200px;
+	margin: 20px auto;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+@media screen and (max-width:699px) {
+	#allElement {
+		position: relative;
+		display: flex;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+@media screen and (min-width:700px) and (max-width:1099px) {
+	#allElement {
+		position: relative;
+		display: flex;
+		margin-left: 10%;
+		margin-right: 5%;
+	}
+}
+
+@media screen and (min-width:1100px) {
+	#allElement {
+		position: relative;
+		display: flex;
+		margin-left: 18%;
+		margin-right: 10%;
+	}
+}
+
+#searchFriendDiv {
+	display: inline-block;
+	width: 50%;
+	height: 50%;
+}
+
+#friendIcon {
+	width: 30px;
+	height: 30px;
+}
+
+#title {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+#searchInputDiv {
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	padding: 5px 10px;
+	width: 80%;
+	outline: none;
+	display: flex;
+}
+
+#searchInput {
+	font-family: 'NanumSquareNeo';
+	width: 100%;
+	border-width: 0;
+	outline: none;
+}
+
+#searchBtn {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+#searchIcon {
+	height: 15px;
+	width: 15px;
+}
+
+#friendList {
+	margin-top: 10px;
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	padding: 10px;
+	width: 80%;
+	height: 100%;
+	font-size: small;
+}
+
+#chatListDiv {
+	display: inline-block;
+	width: 50%;
+	height:100%;
+}
+
+#chatListIcon {
+	height: 15px;
+	width: 15px;
+}
+
+#chatList {
+	display: inline-block;
+	width: 100%;
+	padding: 0px 10px
+}

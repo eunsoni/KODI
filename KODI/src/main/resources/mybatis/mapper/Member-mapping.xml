@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.MemberDAO">
+
+	<!-- select  -->
+	<select id="findMemberByEmail" resultType="memberdto" parameterType="String">
+				SELECT member_idx AS memberIdx, email, pw, member_name AS memberName, flag_idx AS flagIdx
+				FROM members
+				WHERE email=#{email}
+	</select>
+
+	<select id="findMemberName" resultType="String" parameterType="String">
+				SELECT member_name AS memberName FROM members
+				WHERE member_name = #{memberName}
+	</select>
+	<select id="findMemberByIdx" resultType="memberdto" parameterType="int">
+        SELECT member_idx AS memberIdx, email, pw, member_name AS memberName, flag_idx AS flagIdx
+				FROM members
+				WHERE member_idx=#{memberIdx}
+	</select>
+	<select id="findAllMembers" resultType="memberdto">
+        SELECT member_idx AS memberIdx, email, pw, member_name AS memberName, flag_idx AS flagIdx
+				FROM members
+	</select>
+
+	<!-- insert -->
+	<insert id="registerMember" parameterType="memberdto">
+        INSERT INTO members (email, pw, member_name, flag_idx) VALUES (#{email}, #{pw}, #{memberName}, #{flagIdx})
+	</insert>
+
+	<!-- update  -->
+	<update id="updateMemberInfo" parameterType="memberdto">
+        UPDATE members SET pw = #{pw}, member_name = #{memberName} , flag_idx = #{flagIdx} WHERE member_idx = #{memberIdx}
+	</update>
+
+	<!-- delete  -->
+	<delete id="withdrawMember" parameterType="int">
+        DELETE FROM members WHERE member_idx = #{memberIdx}
+	</delete>
+</mapper>

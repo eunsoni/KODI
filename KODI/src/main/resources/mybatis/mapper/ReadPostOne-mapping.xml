@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.ReadPostOneDAO">
+	<!-- select -->
+	<select id="selectPostInfo" resultType="postdto" parameterType="int">
+		select post_idx as postIdx, title, content, regdate, address, category, grade, member_idx as memberIdx from post where post_idx = #{postIdx}
+ 	</select>
+	<select id="selectFlagIdx" resultType="int" parameterType="int">
+		select flag_idx from members where member_idx = #{memberIdx}
+	</select>
+	<select id="selectFlag" resultType="String" parameterType="int">
+		select src from flag where flag_idx = #{flagIdx}
+	</select>
+	<select id="selectMemberName" resultType="String" parameterType="int">
+		select member_name as memberName from members where member_idx = #{memberIdx}
+	</select>
+	<select id="selectPostImages" resultType="String" parameterType="int">
+		select src from post_image where post_idx = #{postIdx}
+	</select>
+	<select id="selectLikeCnt" resultType="int" parameterType="int">
+		select count(*) from post_like where post_idx = #{postIdx}
+	</select>
+	<select id="selectPostTags" resultType="String" parameterType="int">
+		select content from post_tag where post_idx = #{postIdx}
+	</select>
+	<select id="selectComment" resultType="commentdto" parameterType="int">
+		select comment_idx as commentIdx, content, regdate, member_idx as memberIdx, post_idx as postIdx from comments where post_idx = #{postIdx}
+	</select>
+	<select id="isClickLike" resultType="int" parameterType="hashmap">
+		select count(*) from post_like where post_idx = #{postIdx} and member_idx = #{memberIdx}
+	</select>
+	<select id="isClickMarking" resultType="int" parameterType="hashmap">
+		select count(*) from marking_info where post_idx = #{postIdx} and member_idx = #{memberIdx}
+	</select>
+
+	<!-- insert -->
+	<insert id="insertLike" parameterType="hashmap">
+		insert into post_like values(#{memberIdx}, #{postIdx})
+	</insert>
+	<insert id="insertMarking" parameterType="hashmap">
+		insert into marking_info(member_idx, post_idx) values(#{memberIdx}, #{postIdx})
+	</insert>
+	<insert id="insertComment" parameterType="hashmap">
+		insert into comments(content, regdate, member_idx, post_idx) values(#{content}, now(), #{memberIdx}, #{postIdx})
+	</insert>
+	
+	<!-- update -->
+	
+	<!-- delete -->
+	<delete id="deleteLike" parameterType="hashmap">
+		delete from post_like where post_idx = #{postIdx} and member_idx = #{memberIdx}
+	</delete>
+	<delete id="deleteMarking" parameterType="hashmap">
+		delete from marking_info where post_idx = #{postIdx} and member_idx = #{memberIdx}
+	</delete>
+	<delete id="deleteComment" parameterType="int">
+		delete from comments where comment_idx = #{commentIdx}
+	</delete>
+	<delete id="deletePost" parameterType="int">
+		delete from post where post_idx = #{postIdx}
+	</delete>
+	
+</mapper>

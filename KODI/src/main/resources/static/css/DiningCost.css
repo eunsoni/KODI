@@ -1,0 +1,158 @@
+@charset "UTF-8";
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	max-width: 1400px;
+	margin: 20px auto;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+#result {
+	display: flex;
+	flex-direction: column;
+	overflow-x: auto;
+	align-items: center;
+}
+
+#categoryBox {
+	display: flex;
+	align-items: center;
+	padding-left: 10%;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	width: 1200px;
+}
+
+table,
+th,
+td {
+	border: 1px solid #B6BBC4;
+	padding: 5px;
+}
+
+#resultTbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+table {
+	text-align: center;
+}
+
+#categoryBox {
+	align-self: flex-start;
+	margin-bottom: 15px;
+}
+
+#searchBtn {
+	border: 2px solid #B6BBC4;
+	background-color: transparent;
+	border-radius: 10px;
+	padding: 10px 15px;
+	font-family: 'NanumSquareNeo';
+	cursor: pointer;
+}
+
+#category {
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	padding: 10px 15px;
+	height: 30px;
+	width: 230px;
+	font-size: 14px;
+	font-family: 'NanumSquareNeo';
+}
+
+#foodSelect {
+	font-family: 'NanumSquareNeo';
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+	
+	main {
+		max-width: 90%;
+	}
+	#result{
+	width:100%;
+	overflow-x: auto;
+	}
+	
+	#categoryBox {
+	display: flex;
+	align-items: center;
+	
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	width:100%;
+	overflow-x: auto;
+}
+
+table,
+th,
+td,tr {
+	border: 1px solid #B6BBC4;
+	padding: 5px;
+	font-size:15px;
+	width:200px;
+	height:100%;
+}
+
+#resultTbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+table {
+	text-align: center;
+}
+
+#categoryBox {
+	align-self: flex-start;
+	margin-bottom: 10px;
+}
+
+#searchBtn {
+	border: 2px solid #B6BBC4;
+	background-color: transparent;
+	border-radius: 10px;
+	padding: 10px 15px;
+	font-family: 'NanumSquareNeo';
+	cursor: pointer;
+}
+
+#category {
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	padding: 10px 15px;
+	height: 20px;
+	width: 200px;
+	font-size: 12px;
+	font-family: 'NanumSquareNeo';
+}
+
+
+	
+}
+
+
+

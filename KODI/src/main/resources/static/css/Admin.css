@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	max-width: 1200px;
+	margin: 20px auto;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.logo-container {
+	border-bottom: 2px solid #000000;
+}
+
+#KoDi {
+	width: 170px;
+	height: 150px;
+}
+
+.board-box {
+	margin-top: 20px;
+}
+
+#searchinput, #searchselect {
+	font-family: 'NanumSquareNeo';
+	border: 1px solid #B6BBC4;
+	border-radius: 6px;
+	padding: 5px;
+	outline: none;
+}
+
+#board {
+	max-height: 1200px;
+	font-size: 18px;
+}
+
+#title {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	align-items: center;
+	border-bottom: 2px solid #000000;
+	padding-bottom: 20px;
+	vertical-align: middle;
+}
+
+#board table {
+	text-align: left;
+	width: 100%;
+}
+
+#board th:nth-child(1) {
+	width: 25%;
+}
+
+#board th:nth-child(2) {
+	width: 25%;
+}
+
+#board th:nth-child(3) {
+	width: 35%;
+}
+
+#board th:nth-child(4) {
+	width: 15%;
+}
+
+.viewBtn, .deleteBtn {
+	display: inline-block;
+	font-family: 'NanumSquareNeo';
+	padding: 6px 8px;
+	color: #000000;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	width: 60px;
+	white-space: nowrap;
+	box-sizing: border-box;
+	margin-right: 10px;
+	background-color: #EDF2F6;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.withdrawBtn {
+	display: inline-block;
+	font-family: 'NanumSquareNeo';
+	padding: 6px 8px;
+	color: #000000;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	width: 70px;
+	white-space: nowrap;
+	box-sizing: border-box;
+	margin-left: 70px;
+	background-color: #EDF2F6;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.tdDiv {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tr {
+	border-bottom: 2px solid #D9D9D9;
+}
+
+#postList {
+	max-height: 400px;
+	overflow-y: auto;
+}
+
+.viewBtn:hover {
+	background-color: #6A7EFC;
+	color: #ffffff;
+}
+
+.deleteBtn:hover, .withdrawBtn:hover {
+	background-color: #FF5656;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+@media all and (max-width:479px) {
+	.logo-container {
+		border-bottom: 1px solid #000000;
+		text-align: center;
+	}
+	#KoDi {
+		width: 100px;
+		height: 80px;
+	}
+	#board {
+		font-size: 0.7em;
+	}
+	#title {
+		margin-bottom: 10px;
+		border-bottom: 1px solid #000000;
+		padding-bottom: 10px;
+	}
+	#title span {
+		font-size: 0.7em;
+	}
+	#searchinput, #searchselect {
+		font-size: 0.7em;
+		padding: 3px;
+	}
+	.board-box {
+		margin-top: 10px;
+	}
+	#board table {
+		text-align: left;
+		width: 100%;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+	#board th:nth-child(1) {
+		width: 25%;
+	}
+	#board th:nth-child(2) {
+		width: 20%;
+	}
+	#board th:nth-child(3) {
+		width: 35%;
+	}
+	#board th:nth-child(4) {
+		width: 15%;
+	}
+	.viewBtn, .deleteBtn, .withdrawBtn {
+		padding: 2px 5px;
+		margin-right: 5px;
+		width: 50px;
+		font-size: 0.5em;
+	}
+	.withdrawBtn {
+		margin-left: 10px;
+	}
+	.tdDiv {
+		margin-top: 20px;
+		padding-bottom: 20px;
+	}
+}

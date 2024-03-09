@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.DiningCostDAO">
+	<!-- select  -->
+	<select id="selectAllCost" resultType="diningcostdto">
+		select * from dining_cost
+	</select>
+	<select id="selectOneCost" resultType="diningcostdto" parameterType="String">
+		select * from dining_cost where item = #{item}
+	</select>
+</mapper>
+

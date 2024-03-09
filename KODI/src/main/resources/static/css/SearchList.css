@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	max-width: 1200px;
+	margin: 20px auto;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+
+#hBox{
+	display:flex;
+	justify-content: space-between;
+}
+
+.hBox2{
+	display:flex;
+	align-items: center;
+	margin-right: 2%;
+	
+}
+
+#hBox3, #hBox4{
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+#hBox3{
+	margin-right: 10%;
+}
+	
+
+.listBox {
+	display: flex;
+	padding-right: 70px;
+	padding-left: 70px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	border-top: 2px solid #D9D9D9;
+	justify-content: space-between;
+}
+
+.contentBox {
+	background-color: #ffffff;
+	padding: 10px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.post-link {
+	text-decoration: none;
+	color: black;
+}
+
+.post-link:hover {
+	text-decoration: underline;
+}
+
+#title {
+	font-size: 1.1em;
+}
+
+#imageBox {
+	width: 200px;
+	height: 200px;
+	max-width: 300px;
+	max-height: 300px;
+	background-color: #ffffff;
+}
+
+#imageBox img {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	align-items: center;
+	object-fit: cover;
+	justify-content: center;
+}
+
+.nameBox {
+	display: flex;
+	margin-top: auto;
+	align-items: center;
+}
+
+
+.tagBox {
+	margin-top: auto;
+}
+
+.tag {
+	background-color: #ffc107;
+	padding: 2px 5px; 
+	margin-right: 5px; 
+	border-radius: 5px;
+}
+
+
+#memberName, #date {
+	margin-right: 10px;
+}
+
+.listBox2 {
+	display: flex;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	border-top: 2px solid #000000;
+	justify-content: space-between;
+}
+
+.listBox2 table {
+	text-align: left;
+	width: 100%;
+}
+
+.listBox2 th:nth-child(1) {
+	width: 35%;
+}
+
+.listBox2 th:nth-child(2) {
+	width: 55%;
+}
+
+.listBox2 th:nth-child(3) {
+	width: 10%;
+}
+
+.fBtn {
+	display: inline-block;
+	font-family: 'NanumSquareNeo';
+	padding: 8px 8px;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	/* width: 110px; */
+	white-space: nowrap;
+	box-sizing: border-box;
+	background-color: #EDF2F6;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+
+
+.tdDiv {
+	margin-top: 20px;
+	margin-left: 50px;
+	padding-bottom: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	
+}
+
+tr {
+	border-bottom: 2px solid #D9D9D9;
+	align-items: center; 
+	
+}
+
+.tdButton {
+	text-align: center;
+	
+	
+}
+
+
+@media all and (max-width:479px) {
+	.listBox {
+		padding-right: 0px;
+		padding-left: 0px;
+		font-size: 0.9em;
+	}
+	.tdDiv {
+		margin-left: 5px;
+	}
+	p {
+		margin: 5px;
+	}
+}

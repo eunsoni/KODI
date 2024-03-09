@@ -1,0 +1,242 @@
+@charset "UTF-8";
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+
+.allElement {
+	text-align: center;
+}
+
+#postAllInfo {
+	width: 75%;
+	height: 75%;
+	padding-top: 20px;
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+.moreHorizBtn {
+	float: right;
+	background-color: white;
+	border: 2px solid white;
+}
+
+.moreHoriz:hover .option {
+	display: block;
+}
+
+.option {
+	display: none;
+	float: right;
+	z-index: 1;
+}
+
+.optionBtn {
+	display: block;
+	background-color: white;
+	border: 3px solid white;
+	border-radius: 5px;
+}
+
+#postTitle {
+	text-align: center;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+#postInfo {
+	text-align: center;
+}
+
+@media screen and (max-width:599px) {
+	#postInfo #grade {
+		margin-right: 15%;
+	}
+}
+
+@media screen and (min-width:600px) and (max-width:1250px) {
+	#postInfo #grade {
+		margin-right: 35%;
+	}
+}
+
+@media screen and (min-width:1251px) {
+	#postInfo #grade {
+		margin-right: 65%;
+	}
+}
+
+#postContent {
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	box-shadow: 3px 5px 5px lightgrey;
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	text-align: left;
+}
+
+#postImage {
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	box-shadow: 3px 5px 5px lightgrey;
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	padding: 20px;
+	text-align: left;
+}
+
+#addrDiv {
+	margin-left: 4%;
+}
+
+#addrInfo {
+	display: inline;
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 10px;
+}
+
+#tagDiv {
+	margin-top: 15px;
+	margin-left: 4%;
+}
+
+/*#tag1 {
+	display: inline;
+	border: 2px solid #FF5656;
+	background-color: #FF5656;
+	border-radius: 10px;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px;
+}*/
+
+#btns {
+	margin: 0 auto;
+	text-align: left;
+	width: 93%;
+	padding: 20px;
+}
+
+#btns #like {
+	background-color: #EDF2F6;
+	border: 2px solid #EDF2F6;
+	border-radius: 10px;
+	width: 80px;
+	cursor: pointer;
+	font-family: 'NanumSquareNeo';
+}
+
+#btns #like img {
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+	padding-right: 7px;
+}
+
+#btns #marker {
+	background-color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#btns #marker img {
+	width: 16px;
+	height: 16px;
+}
+
+#btns #share {
+	background-color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#btns #share img {
+	width: 16px;
+	height: 16px;
+}
+
+#commentInfo {
+	text-align: left;
+	width: 75%;
+	height: 75%;
+	padding-bottom: 30px;
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+#inputComment {
+	width: 100%;
+	font-family: 'NanumSquareNeo';
+}
+
+#commentInfo #postBtn {
+	background-color: #EDF2F6;
+	border: 2px solid #EDF2F6;
+	border-radius: 10px;
+	width: 80px;
+	box-shadow: 3px 3px 3px lightgrey;
+	float: right;
+	cursor: pointer;
+	font-family: 'NanumSquareNeo';
+}
+
+#commentInfo #showComment {
+	background-color: #EDF2F6;
+	height: 100%;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 10px;
+	border: 2px solid #EDF2F6;
+	box-shadow: 3px 10px 5px lightgrey;
+}
+
+#updatePostBtn {
+	cursor: pointer;
+	font-family: 'NanumSquareNeo';
+}
+
+#deletePostBtn {
+	cursor: pointer;
+	font-family: 'NanumSquareNeo';
+}
+
+@media screen and (max-width:699px) {
+	#commentInfo #showComment {
+		width: 85%;
+	}
+}
+
+@media screen and (min-width:700px) and (max-width:1099px) {
+	#commentInfo #showComment {
+		width: 90%;
+	}
+}
+
+@media screen and (min-width:1100px) {
+	#commentInfo #showComment {
+		width: 95%;
+	}
+}

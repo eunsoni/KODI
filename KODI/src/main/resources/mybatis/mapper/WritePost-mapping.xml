@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org/DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="dao.WritePostDAO">
+	<!-- select -->
+	<select id="selectPostIdx" resultType="int" parameterType="int">
+		select post_idx as postIdx
+		from post
+		where member_idx = #{myMemberIdx}
+		order by post_idx desc limit 1;
+	</select>
+	
+	<!-- insert -->
+	<insert id="insertPostInfo" parameterType="hashmap">
+		insert into post(title, content, regdate, address, category, grade, member_idx)
+		values(#{title}, #{content}, now(), #{address}, #{category}, #{grade}, #{myMemberIdx});
+	</insert>
+	
+	<insert id="insertPostTags" parameterType="hashmap">
+		insert into post_tag(content, post_idx)
+		values(#{postTags}, #{postIdx});
+	</insert>
+	
+	<insert id="insertPostImages" parameterType="hashmap">
+		insert into post_image(src, post_idx)
+		values(#{postImages}, #{postIdx});
+	</insert>
+	<!-- update -->
+	<!-- delete -->
+</mapper>

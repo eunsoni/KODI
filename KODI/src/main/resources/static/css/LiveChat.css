@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'NanumSquareNeo';
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width:549px) {
+	#exitChat {
+		margin-right: 10%;
+	}
+	#allMsgList {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	#sendMsgInput {
+		width: 55%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:550px) and (max-width:659px) {
+	#exitChat {
+		margin-right: 10%;
+	}
+	#allMsgList {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	#sendMsgInput {
+		width: 60%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:660px) and (max-width:909px) {
+	#exitChat {
+		margin-right: 10%;
+	}
+	#allMsgList {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	#sendMsgInput {
+		width: 66%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:910px) and (max-width:1199px) {
+	#exitChat {
+		margin-right: 10%;
+	}
+	#allMsgList {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	#sendMsgInput {
+		width: 70%;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (min-width:1200px) and (max-width:1429px){
+	#exitChat {
+		margin-right: 15%;
+	}
+	#allMsgList {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	#sendMsgInput {
+		width: 61%;
+		margin-left: 15%;
+	}
+}
+
+@media screen and (min-width:1430px) {
+	#exitChat {
+		margin-right: 20%;
+	}
+	#allMsgList {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	#sendMsgInput {
+		width: 53%;
+		margin-left: 20%;
+	}
+}
+
+#exitChat {
+	float: right;
+	border: none;
+	background-color: white;
+	font-family: 'NanumSquareNeo';
+	display: flex;
+	cursor: pointer;
+}
+
+#exitIcon {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+#exitMsg {
+	display: inline-block;
+}
+
+#allMsgList {
+	display: block;
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	margin-top: 70px;
+	margin-bottom: 20px;
+	padding: 20px;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+#friendName {
+	display: inline-block;
+	font-weight: bolder;
+	text-align: center;
+	padding: 5px 10px;
+	width: 50px;
+}
+
+#content {
+	display: inline-block;
+	margin-left: 10px;
+	border: 2px solid #EDF2F6;
+	border-radius: 10px;
+	background-color: #EDF2F6;
+	padding: 5px 20px;
+	text-align: center;
+}
+
+#regdate {
+	margin-top: 0px;
+	font-size: small;
+}
+
+#sendMsgDiv {
+	display: flex;
+	margin-bottom: 70px;
+}
+
+#sendMsgInput {
+	display: inline-block;
+	border: 2px solid #B6BBC4;
+	border-radius: 10px;
+	padding: 10px 15px;
+	margin-right: 10px;
+	font-family: 'NanumSquareNeo';
+}
+
+#sendMsgBtn {
+	display: inline-block;
+	cursor: pointer;
+	border: 2px solid #EDF2F6;	
+	border-radius: 5px;
+	background-color: #EDF2F6;
+	width: 65px;
+	height: 40px;
+	color: gray;
+	font-family: 'NanumSquareNeo';
+}
+

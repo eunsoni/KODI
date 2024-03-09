@@ -1,0 +1,218 @@
+body {
+   font-family: 'NanumSquareNeo';
+   margin: 0;
+   padding: 0;
+}
+
+/*header*/
+header {
+   background-color: #ffffff;
+   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+   padding: 10px 0;
+   top: 0;
+   position: sticky;
+}
+
+.header-container {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   max-width: 1920px;
+   margin: 0 auto;
+}
+
+.login button {
+   font-family: 'NanumSquareNeo';
+   padding: 4px 15px;
+   margin-right: 5px;
+   background-color: #494953;
+   color: #FFFFFF;
+   border: none;
+   cursor: pointer;
+   border-radius: 8px;
+   width: 80px;
+   box-sizing: border-box;
+   
+}
+
+.language-selection select {
+   padding: 2.5px ;
+   border-radius: 8px;
+   margin-right: 50px;
+   width: 80px;
+   box-sizing: border-box;
+}
+
+/**************** main **************/
+main, .page3 {
+   max-width: 1920px;
+   margin: 20px auto;
+}
+
+.logo-container {
+   text-align: center;
+}
+
+.image-container {
+   padding: 200px 0;
+   font-size: 40px;
+   font-weight: bold;
+   text-align: center;
+   max-width: 1920px;
+   max-height: 1080px;
+   display: block;
+   margin-top: 30px;
+   background-size: cover;
+}
+
+.join-input {
+   text-align: center;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.join-input > input {
+   padding: 10px;
+   margin-bottom: 10px;
+   width: 30%;
+   max-width: 30%;
+   margin-right: 8px;
+   border: 1px solid #898989;
+   border-radius: 4px;
+   outline: none;
+   font-family: 'NanumSquareNeo';
+}
+
+.join-input > button {
+   font-family: 'NanumSquareNeo';
+   padding: 8px 17px;
+   border: none;
+   cursor: pointer;
+   color: #FFFFFF;
+   border-radius: 8px;
+   margin-right: 5px;
+   width: 90px;
+   box-sizing: border-box;
+}
+
+.joinbtn {
+   background-color: #FF5656;
+}
+
+.nonjoinbtn {
+   background-color: #6A7EFC;
+}
+
+/*scroll*/
+.page1-box {
+   max-width: 1200px;
+   margin: 20px auto;
+   justify-content: center;
+   display: flex;
+   text-align: center;
+   align-items: center;
+   border-bottom: 2px solid #ccc;
+   margin-bottom: 20px; 
+   padding-bottom: 20px; 
+}
+
+.textbox, .imgbox1,.imgbox2,.imgbox3 {
+   flex-basis: 50%;
+   padding: 20px;
+   flex-direction: column; 
+   justify-content: center;
+}
+
+select{
+   font-family: 'NanumSquareNeo';
+}
+
+.imgbox1>img {
+   height: 80%;
+   width: 80%;
+}
+
+.imgbox2>img {
+   height: 80%;
+   width: 80%;
+}
+
+.imgbox3>img {
+   height: 80%;
+   width: 80%;
+}
+
+#title1,#title2,#title3,#title4,#title5,#title6 {
+   font-size: 40px;
+   font-weight: bold;
+}
+
+#content1,#content2,#content3,#content4,#content5 {
+   font-size: 28px;
+}
+
+#content6{
+	font-size: 18px;
+}
+
+.page2-box {
+   max-width: 1200px;
+   margin: 50px auto;
+   justify-content: center;
+   text-align: center;
+   font-weight: bold;
+}
+
+
+
+@media all and (max-width:479px){
+.language-selection select {
+   margin-right: 0;
+   font-size: 0.7em;
+   width: 70px;
+}
+
+.login button {
+   font-size: 0.7em;
+   width: 70px;
+}
+
+.logo-container img{
+	height: 136px; 
+	width: 156px;
+}
+
+.join-input > input {
+   font-size: 0.7em;
+   padding: 8px;
+}
+
+.join-input > button {
+   font-size: 0.6em;
+   width: 80px;
+}
+
+.image-container {
+   padding: 150px 0;
+   font-size: 20px;
+}
+
+.textbox, .imgbox {
+   padding: 10px;
+
+}
+#title1,#title2,#title3,#title4,#title5,#title6 {
+   font-size: 18px;
+}
+
+#content1,#content2,#content3,#content4,#content5 {
+   font-size: 15px;
+}
+
+.page2-box {
+   margin: 20px auto;
+}
+
+
+	
+}

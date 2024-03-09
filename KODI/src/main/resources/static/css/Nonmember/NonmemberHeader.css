@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/*header*/
+body{
+  font-family: 'NanumSquareNeo';
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  top: 0;
+  position: sticky;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.icon{
+  width:20px;
+  height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  }
+
+
+.menu {
+  justify-content: flex-start;
+  cursor: pointer;
+  margin-left: 2%;
+}
+.end-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 2%;
+}
+
+.btn{
+  max-width:200px;
+  font-family: 'NanumSquareNeo';
+  padding: 4px 5px;
+  margin-right: 5px;
+  color : #282828;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+
+}
+
+.btn:hover{
+  color : #6A7EFC;
+  transition: 0.3s;
+}
+
+.language-selection select {
+  font-family: 'NanumSquareNeo';
+  padding: 4px;
+  border-radius: 8px;
+  margin-right: 2%;
+}
+
+.menu-content {
+  display: none;
+  position: fixed;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.menu-content a {
+  color: #000;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.menu-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.menu:hover .menu-content {
+  display: block;
+}
+
+#topBtn {
+  display: none;
+  position: fixed; 
+  bottom: 5px; 
+  right:5px;
+  z-index: 99; 
+  background-color:transparent;
+  border: none; 
+  outline: none; 
+  cursor: pointer;
+  padding: 10px; 
+  border-radius: 100px; 
+}
+
+#topBtn img {
+  width: 50px; 
+  height: 50px;
+}
+
+@media all and (min-width : 768px) , (max-width : 1024px) {
+
+#topBtn img {
+  width: 20px; 
+  height: 20px;
+}
+	
+}
+
+
+@media all and (max-width:479px) {
+
+
+header {
+  font-size :0.7em;
+}
+
+.header-container {
+  max-width: 500px;
+}
+
+.btn{
+  font-size :0.7em;
+}
+
+.language-selection select {
+  font-size :0.7em;
+  margin-right: 0;
+}
+
+.menu{
+	margin-left: 1%;
+}
+
+.menu-content a {
+  font-size: 0.7em;
+}
+
+.end-btn{
+	margin-right: 1%;
+}
+
+.icon{
+  width:15px;
+  height: 15px;
+  }  
+ 
+}
+
+
