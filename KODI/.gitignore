@@ -32,4 +32,46 @@ build/
 ### VS Code ###
 .vscode/
 
+### Application Configuration (개인정보 보호) ###
 src/main/resources/application.properties
+src/main/resources/application-*.properties
+*.properties
+
+### Database Setup (민감한 정보) ###
+database_setup.sql
+**/database_setup*.sql
+
+### API Keys and Secrets ###
+*.key
+*.secret
+**/secrets/
+**/keys/
+
+### File Uploads ###
+uploads/
+files/
+images/
+**/upload/**
+
+### Logs ###
+*.log
+logs/
+**/logs/
+
+### Environment Files ###
+.env
+.env.local
+.env.production
+.env.development
+
+### Backup Files ###
+*.bak
+*.backup
+*.tmp
+
+### IDE and OS ###
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
