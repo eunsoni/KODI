@@ -128,12 +128,12 @@ spring.profiles.active=dev
 
 ### 4. 애플리케이션 실행
 ```bash
-# Maven을 이용한 실행
-./mvnw spring-boot:run
+# Gradle을 이용한 실행
+./gradlew bootRun
 
-# 또는 JAR 파일 생성 후 실행
-./mvnw clean package
-java -jar target/KODI_project-0.0.1-SNAPSHOT.war
+# 또는 WAR 파일 생성 후 실행
+./gradlew clean bootWar
+java -jar build/libs/KODI_project-0.0.1-SNAPSHOT.war
 ```
 
 ### 5. 접속 확인
